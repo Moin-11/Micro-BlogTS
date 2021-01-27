@@ -1,7 +1,5 @@
 import {useParams, useHistory} from "react-router-dom"
 import useFetch from "../hooks/useFetch";
-import {Blog} from "../components/blog/blog"
-
 
 const BlogDetails = () => {
     interface RouteParams { id: string }
