@@ -7,7 +7,7 @@ import useFetch from "../hooks/useFetch"
 const Home = () => {
 
   const url: string = "http://localhost:8000/blogs";
-  const { blogs, isPending, error } = useFetch(url);
+  const { data : blogs, isPending, error } = useFetch(url);
 
   return (
     <div className="home">

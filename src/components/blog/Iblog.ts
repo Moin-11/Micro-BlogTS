@@ -1,6 +1,6 @@
 export interface IBlog{
 
-    id: Number;
+    id: Number | undefined;
     title: string;
     body: string;
     author: string;

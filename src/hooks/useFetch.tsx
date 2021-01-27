@@ -6,7 +6,7 @@ const useFetch = ({ url }: any) => {
     
 
   //Blog-List
-  const [blogs, setBlogs] = useState<Blog[]>([]);
+  const [data, setData] = useState<Blog[]>([]);
 
   // Loader Boolean
   const [isPending, setIsPending] = useState<Boolean>(true);
@@ -38,7 +38,7 @@ const useFetch = ({ url }: any) => {
             
           }).then((data : Blog[]) => {
       
-            setBlogs(data);
+            setData(data);
             setIsPending(false);
             setError(null);
       
@@ -61,7 +61,7 @@ const useFetch = ({ url }: any) => {
       return () => { abortCont.abort(); }
       }, [url])
     
-    return {blogs , isPending, error}
+    return {data , isPending, error}
     
     
 }
