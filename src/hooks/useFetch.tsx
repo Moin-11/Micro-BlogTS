@@ -9,12 +9,12 @@ const useFetch = ({ url }: any) => {
   const [data, setData] = useState<Blog[]>([]);
 
   // Loader Boolean
-  const [isPending, setIsPending] = useState<Boolean>(true);
+  const [isPending, setIsPending] = useState<boolean>(true);
 
 
 
   //Error Message
-  const [error, setError] = useState<String | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
 
     useEffect(() => {
