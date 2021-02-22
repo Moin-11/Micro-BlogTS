@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Blog } from "../components/blog/blog";
 
-const useFetch = ({ url }: any) => {
+const useFetch = (url: string) => {
   //Blog-List
   const [data, setData] = useState<Blog[]>([]);
 
@@ -13,12 +13,9 @@ const useFetch = ({ url }: any) => {
 
   useEffect(() => {
     const abortCont: AbortController = new AbortController();
-
+    console.log(url);
     setTimeout(() => {
-      fetch(
-        "https://my-json-server.typicode.com/Moin-11/json-server-microBlog-TS/blogs",
-        { signal: abortCont.signal }
-      )
+      fetch(url, { signal: abortCont.signal })
         .then((res: Response) => {
           if (!res.ok) {
             throw Error("could not fetch data for that result");

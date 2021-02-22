@@ -9,7 +9,8 @@ const BlogDetails = () => {
   const { id } = useParams<RouteParams>();
   const numID = parseInt(id);
   const { data: blog, error, isPending } = useFetch(
-    "http://localhost:8000/blogs/" + id
+    "https://my-json-server.typicode.com/Moin-11/json-server-microBlog-TS/blogs/" +
+      id
   );
   const history = useHistory();
 
